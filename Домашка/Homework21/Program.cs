@@ -1,79 +1,30 @@
-﻿// Напишите программу, которая принимает на вход координаты двух точке и находит расстояние между ними в 2D пространстве.
-// A (3, 6); B (2, 1) -> 5,09
-// A (7, -5); B (1, -1) -> 7,21
-
-// Console.Clear();
-
-// double GetRangeCord (int x1, int y1, int x2, int y2)
-// {
-//     double xpow = Math.Pow(Convert.ToDouble(x1 - x2), 2);
-//     double ypow = Math.Pow(Convert.ToDouble(y1 - y2), 2);
-//     double xysqrt = Math.Sqrt(xpow +ypow);
-
-//     return Math.Round(xysqrt, 2, MidpointRounding.ToZero);
-// }
-
-// Console.WriteLine($"Расстояние между точками {GetRangeCord(3, 6, 2, 1)}");
-// Console.WriteLine($"Расстояние между точками {GetRangeCord(7, -5, 1, -1)}");
-
-// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+﻿// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
 // A (3,6,8); B (2,1,-7), -> 15.84
+
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
-double GetRangeCord(int x1, int y1, int z1, int x2, int y2, int z2)
-{
-    double xpow = Math.Pow(Convert.ToDouble(x2 - x1), 2);
-    double ypow = Math.Pow(Convert.ToDouble(y2 - y1), 2);
-    double zpow = Math.Pow(Convert.ToDouble(z2 - z1), 2);
-    double xyzSqrt = Math.Sqrt(xpow * xpow + ypow * ypow + zpow * zpow);
+System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+Console.Clear();
+Console.WriteLine("Enter X1:");
+int X1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter Y1:");
+int Y1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter Z1:");
+int Z1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter X2:");
+int X2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter Y3:");
+int Y2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter Z3:");
+int Z2 = int.Parse(Console.ReadLine());
 
-    return Math.Round(xyzSqrt, 2, MidpointRounding.ToZero);
+int X = (X2 - X1);
+int Y = (Y2 - Y1);
+int Z = (Z2 - Z1);
 
-    Console.WriteLine($"Расстояние между точками {GetRangeCord(3, 6, 8, 2, 1, -7)}");
-    Console.WriteLine($"Расстояние между точками {GetRangeCord(7, -5, 0, 1, -1, 9)}");
-}
+int XYZ = (X * X + Y * Y + Z * Z);
 
+double SqrtXYZ = Math.Sqrt(XYZ);
+Console.WriteLine("{0:0.00}",SqrtXYZ);
 
-
-
-
-// Напишите программу, которая принимает на вход координаты двух точке и находит расстояние между ними в 2D пространстве.
-// A (3, 6); B (2, 1) -> 5,09
-// A (7, -5); B (1, -1) -> 7,21
-
-// Console.Clear();
-
-// double GetRangeCord (int x1, int y1, int x2, int y2)
-// {
-//     double xpow = Math.Pow(Convert.ToDouble(x1 - x2), 2);
-//     double ypow = Math.Pow(Convert.ToDouble(y1 - y2), 2);
-//     double xysqrt = Math.Sqrt(xpow +ypow);
-
-//     return Math.Round(xysqrt, 2, MidpointRounding.ToZero);
-// }
-
-// Console.WriteLine($"Расстояние между точками {GetRangeCord(3, 6, 2, 1)}");
-// Console.WriteLine($"Расстояние между точками {GetRangeCord(7, -5, 1, -1)}");
-
-
-// int x1 = Console.ReadLine("Введите координату X первой точки: ");
-// int y1 = Console.ReadLine("Введите координату Y первой точки: ");
-// int z1 = Console.ReadLine("Введите координату Z первой точки: ");
-// int x2 = Console.ReadLine("Введите координату X второй точки: ");
-// int y2 = Console.ReadLine("Введите координату Y второй точки: ");
-// int z2 = Console.ReadLine("Введите координату Z второй точки: ");
-
-// int A = x2 - x1;
-// int B = y2 - y1;
-// int C = z1 - z2;
-
-// double length = Math.Sqrt(A * A + B * B + C * C);
-// Console.WriteLine($"Длинна отрезка {length}");
-
-
-// // Функция ввода сообщения
-// //int ReadInt(string message)
-// //{
-//  //Console.Writeline(message);
-//  return Convert.ToInt32(Console.ReadLine());
