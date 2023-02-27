@@ -30,18 +30,31 @@ int[] GetArray(int size, int minValue, int maxValue)
 int GetSumNotEvenArray(int[] inputArray)
 {
     int NotEven = 0;
-    for (int i = 0; i < inputArray.Length; i++)
+    for (int i = 1; i < inputArray.Length; i++)
     {
+        
         if (i % 2 == 0)
         {
-         // немного не понял, почему можно оставить это условие пустым?
+            // немного не понял, почему можно оставить это условие пустым?
         }
-        else 
+        else
         {
             NotEven += inputArray[i];
         }
 
     }
-return NotEven;
+    return NotEven;
 }
+
+// 2 ой способ, подсмотренный в интернете. 
+
+// int GetSumNotEvenArray(int[] inputArray)
+// {
+//     int NotEven = 0;
+//     for (int i = 1; i < inputArray.Length; i = i + 2)
+//     {
+//         NotEven += inputArray[i];
+//     }
+//     return NotEven;
+// }
 
